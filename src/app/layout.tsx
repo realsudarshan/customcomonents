@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className} >
+       
+        <nav className="flex  w-screen  flex-row items-center bg-gradient-to-r from-cyan-500 to-blue-500 ">
+        <div className="flex flex-row ">
+        <FontAwesomeIcon icon={faHome} className='h-15 w-16' />
+          </div>
+        
+          {/* <a href="#">Tailwind</a> */}
+          <div className="flex flex-row  basis-3/4">
+            <ul className="flex flex-row w-full justify-around">
+                <li>Home</li>
+                <li>Cards</li>
+                <li>Footer</li>
+                <li>NavBars</li>
+                <li>Testimonials</li>
+            </ul>
+            </div>
+            <div className=" flex basis-1/4 flex-row justify-around items-center">
+              <button className="h-10 w-20 rounded-lg bg-yellow-600">Login</button>
+              <button className="h-10 w-20 rounded-lg bg-yellow-600">Sign Up</button>
+             
+            </div>
+          
+        </nav>
+
+
+
+
+
+        {children}</body>
     </html>
   );
 }

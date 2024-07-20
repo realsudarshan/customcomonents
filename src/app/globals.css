@@ -30,6 +30,7 @@
       --chart-4: 43 74% 66%;
       --chart-5: 27 87% 67%;
     }
+  
 
     .dark {
       --background: 0 0% 3.9%;
@@ -60,6 +61,9 @@
   }
 
   @layer base {
+    .buttonstyle{
+      @apply hover:bg-green-400 hover:border-b-4;
+    }
     * {
       @apply border-border;
     }
@@ -67,3 +71,4 @@
       @apply bg-background text-foreground;
     }
   }
+ 

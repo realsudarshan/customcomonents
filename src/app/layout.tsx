@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import Link from "next/link";
 
 
 
@@ -20,9 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} >
+      <body className="{inter.className}"  >
        
-        <nav className="flex  w-screen  flex-row items-center bg-gradient-to-r from-cyan-500 to-blue-500 ">
+        <nav className="min-w-screen flex   flex-row items-center bg-gradient-to-r from-cyan-500 to-blue-500 overflow-hidden">
         <div className="flex flex-row ">
         <FontAwesomeIcon icon={faHome} className='h-15 w-16' />
           </div>
@@ -30,7 +31,7 @@ export default function RootLayout({
           {/* <a href="#">Tailwind</a> */}
           <div className="flex flex-row  basis-3/4">
             <ul className="flex flex-row w-full justify-around">
-                <li>Home</li>
+                <li><Link href="/Home">Home</Link></li>
                 <li>Cards</li>
                 <li>Footer</li>
                 <li>NavBars</li>
@@ -38,8 +39,8 @@ export default function RootLayout({
             </ul>
             </div>
             <div className=" flex basis-1/4 flex-row justify-around items-center">
-              <button className="h-10 w-20 rounded-lg bg-yellow-600">Login</button>
-              <button className="h-10 w-20 rounded-lg bg-yellow-600">Sign Up</button>
+              <button className="h-10 w-20 rounded-lg bg-yellow-600 hover:bg-green-400 hover:border-b-4 ">Login</button>
+              <button className="h-10 w-20 rounded-lg bg-yellow-600 buttonstyle">Sign Up</button>
              
             </div>
           
